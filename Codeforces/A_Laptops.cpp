@@ -8,25 +8,23 @@ using namespace std;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
-      int t;
-    int count==0;
-    //int cnt2==0;
-    cin>>t;
-    while(t--){
-      int a,b;
-     cin>>a>>b;
-     if(a<b){
-        count++;
+    ll n;
+    cin>>n;
+    pair<int,int>ar[n];
+    for(int i =0;i<n;i++){
+        cin>>ar[i].first>>ar[i].second;
+    }
+    sort(ar,ar+n);
+    bool bl =false;
+    for(int i=0;i<n-1;i++){
+        if(ar[i].first<ar[i].second && ar[i].second>ar[i+1].second){
+            cout<<"Happy Alex"<<el;
+            bl = true;
+            break;
         }
     }
-    if(count>0){
-        cout<<"Happy Alex"<<el;
-    }
-    else{
+    if(!bl){
         cout<<"Poor Alex"<<el;
     }
-    
-        
-      
     return 0;
 }
