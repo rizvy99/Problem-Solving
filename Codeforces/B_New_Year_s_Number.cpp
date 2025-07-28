@@ -12,8 +12,8 @@ int main() {
     cin>>t;
     while(t--){
         cin>>n;
-        int x=n/2020;
-        int y = n%2020;
+        ll x=n/2020;
+        ll y = n%2020;
         if(n<2020){
             cout<<"NO"<<el;
         }else{

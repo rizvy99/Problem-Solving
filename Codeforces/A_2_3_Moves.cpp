@@ -16,8 +16,6 @@ int main() {
         if(n==1){cout<<"2"<<el;}
         else if(n%3==0){cout<<n/3<<el;}
         else{cout<<(n/3)+1<<el;}
-        
-     
     }
     return 0;
 }

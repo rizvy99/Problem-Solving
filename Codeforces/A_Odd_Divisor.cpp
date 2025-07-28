@@ -11,21 +11,26 @@ int main() {
     ll t;
     cin>>t;
     while(t--){
-     ll n,x=0;
-     cin>>n;
-     for(int i=3;i<=n;i+=2){
-        if(n%i==0){
-            x++;
-            break;
+        ll n;
+        //int cnt=0;
+        cin>>n;
+        if(n%2!=0){
+            cout<<"YES"<<el;
+        }else{
+            int count=0;
+            while(n>=1){
+                n=n/2;
+                if(n%2!=0&&n!=1){
+                    count++;
+                    break;
+                } 
+            }
+            if(count>0){
+                cout<<"YES"<<el;
+            }else{
+                cout<<"NO"<<el;
+            }
         }
-     }
-     if(x>0){
-        cout<<"YES"<<el;
-     }
-     else{
-        cout<<"NO"<<el;
-     }
-          
     }
     return 0;
 }

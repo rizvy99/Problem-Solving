@@ -11,24 +11,20 @@ int main() {
     ll t;
     cin>>t;
     while(t--){
-        int n,cnt=0,cnt1=0;
+        int n;
         cin>>n;
         string s;
         cin>>s;
-        for(int i=0;i<n;i++){
-            if(s[i]=='B'){
-                cnt=i;
-                break;
-            }
+        deque<char>dq(s.begin(),s.end());
+        while(!dq.empty() && dq.front()=='W'){
+            dq.pop_front();
         }
-        for(int i=n-1;i>=0;i--){
-            if(s[i]=='B'){
-                cnt1=i;
-                break;
-            }
+        while( !dq.empty() && dq.back()=='W'){
+            dq.pop_back();
         }
-        cout<<cnt1-cnt+1<<el;
+        cout<<dq.size()<<el;
      
     }
     return 0;
 }
+

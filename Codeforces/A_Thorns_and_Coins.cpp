@@ -23,7 +23,7 @@ int main() {
             }
         }
         if(cnt==-1){
-            cnt=s.size();
+            cnt=n;
         }
         for(int i=0;i<cnt;i++){
             if(s[i]=='@'){

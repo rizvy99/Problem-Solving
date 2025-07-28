@@ -13,16 +13,21 @@ int main() {
     while(t--){
         ll n;
         cin>>n;
-        string s,sr=0;
+        string s;
         cin>>s;
-        for(int i=0;i<n;i++){
-            if(s[i]=='a'){
-                sr+="0";
-            }else{
-                sr+="1";
+        int cnt=0,total=s.size();
+        
+        for(int i=0;i<n-1;i++){
+            if(s[i]!=s[i+1]){
+                cnt++;
             }
+            else{break;}
         }
-        cout<<sr<<el;
+        if(cnt==(total-1)){
+            cout<<"YES"<<el;
+        }else{
+            cout<<"NO"<<el;
+        }
     }
     return 0;
 }

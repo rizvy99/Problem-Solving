@@ -5,7 +5,7 @@
 #define rev(x) reverse(all(x))
 #define sortall(x) sort(all(x))
 using namespace std;
-int main() {
+/*int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
     int n;
@@ -38,4 +38,39 @@ int main() {
     cout<<sum1<<" "<<sum<<el;
     
     return 0;
+}*/
+//alternative way
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int>v(n);
+    for(int i=0;i<n;i++){cin>>v[i];}
+    int s=0,d=0,f=0;
+    while(!v.empty()){
+        
+        if(f!=1){
+            if(*v.begin()>v.back()){
+                s+=v[0];
+                v.erase(v.begin());
+            }
+            else{
+                s+=v.back();
+                v.pop_back();
+            }
+            f++;
+        }
+        else{
+            if(*v.begin()<v.back()){
+                d+=v.back();
+                v.pop_back();
+            }else{
+                d+=v[0];
+                v.erase(v.begin());
+            }
+            f--;
+        }
+        
+    }
+    cout<<s<<" "<<d<<el;
 }

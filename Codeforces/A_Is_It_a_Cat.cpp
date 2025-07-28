@@ -15,17 +15,22 @@ int main() {
         cin>>n;
         string s;
         cin>>s;
-        int cnt1=n;
-        transform(s.begin(), s.end(), s.begin(), ::toupper); 
-        if(n<4){cout<<"NO"<<el;}
-        else{
-        for(int i=0;i<n;i++){
-            if((s[0]=='M'&&s[i]=='M')||s[i]=='E'||s[i]=='O'||s[n-1]=='W'){
-               cnt1--;
-            } 
+        transform(s.begin(), s.end(), s.begin(), ::tolower); 
+        vector<char> v;
+        v.reserve(s.size());
+        v.push_back(s[0]);
+        for (int i = 1; i < n; i++) {
+            if (s[i] != s[i - 1]) {
+                v.push_back(s[i]);
+            }
         }
-        if(cnt1==0){cout<<"YES"<<el;}
-        else{cout<<"NO"<<el;}
+        string s1(v.begin(), v.end());
+        
+        string s2 = "meow";
+        if(s1==s2){
+            cout<<"YES"<<el;
+        }else{
+            cout<<"NO"<<el;
         }
      
     }

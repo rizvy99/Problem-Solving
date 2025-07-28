@@ -8,11 +8,10 @@ using namespace std;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int t;
+    ll t;
     cin >> t;
-    
     while (t--) {
-        int n, d;
+        ll n, d;
         cin >> n >> d;
         string s;
         cin >> s;

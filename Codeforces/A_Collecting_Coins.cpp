@@ -17,7 +17,7 @@ int main() {
         if(sum%3!=0){
             cout<<"NO"<<el;
         }else{
-            if(a>sum/3 ||b>sum/3 || c>sum/3){
+            if(a>sum/3 || b>sum/3 || c>sum/3){
                 cout<<"NO"<<el;
             }else{
                 cout<<"YES"<<el;

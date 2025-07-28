@@ -1,66 +1,28 @@
-#include <iostream>
-#include <algorithm>
-
+#include<bits/stdc++.h>
+#define ll long long int
+#define el "\n"
+#define all(x) x.begin(), x.end()
+#define rev(x) reverse(all(x))
+#define sortall(x) sort(all(x))
 using namespace std;
-
 int main() {
-    int t,v;
-    cin >> t;
-
-    while (t--) {
-        int n;
-        cin >> n;
-
-        int s = 1;  // Minimum value for k
-        int l = 1e9;  // Maximum value for k
-
-        for (int i = 0; i < n; ++i) {
-            int a, x;
-            cin >> a >> x;
-
-            if (a == 1) {
-                s = max(s, x);
-            } if (a == 2) {
-                l = min(l, x);
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    int t;
+    cin>>t;
+    while(t--){
+        int n,a,x,low=0,high=0,cnt=0;
+        cin>>n;
+        for(int i=0;i<n;i++){
+            cin>>a>>x;
+        }
+        if(a==1){x==low;}
+            if(a==2){x==high;}
+            for(int j=low;j<=high;j++){
+                while(j<=high){cnt++;}
             }
-        
-
-        // Exclude values specified by constraints of type 3
-          v = 0;
-        /*for (int i = 0; i < n; ++i) {
-            int a, x;
-            cin >> a >> x;*/
-
-            if (a == 3) {
-                v = x;
-                break;
-            }
-        }
-
-        if(s>l){
-            cout<<"0"<<endl;
-        }
-        else{
-            int ans;
-            ans=l-s+1;
-            for(int i=0;i<v;i++){
-                if(i>=s&&i<=l){
-                    ans--;
-                }
-            }
-            cout<<ans<<endl;
-
-        }
-
-        // Adjust upper_bound based on the exclusion constraint
-       /* if (exclude_value >= lower_bound && exclude_value <= upper_bound) {
-            upper_bound--;
-        }
-
-        // Calculate the number of integers satisfying all constraints
-        int result = max(0, upper_bound - lower_bound + 1);
-        cout << result << endl;*/
+        cout<<cnt<<el;
+     
     }
-
     return 0;
 }

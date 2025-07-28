@@ -13,18 +13,22 @@ int main() {
     while(t--){
         ll n;
         cin>>n;
-        string s;
-        vector<int>cnt(26,-1),ar(n);
+        vector<int>v(n);
         for(int i=0;i<n;i++){
-            cin>>ar[i];
-            for(char ch='z';ch>='a';ch--){
-                if(cnt[ch-'a']==ar[i]-1){
-                    cnt[ch-'a']++;
-                    s+=ch;
+            cin>>v[i];
+        }
+        vector<int>cnt(26,0);
+        string s=" ";
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 26; j++) {
+                if (cnt[j] == v[i]) {
+                    cnt[j]++;   
+                    s += char(97 + j);   
                     break;
                 }
             }
         }
         cout<<s<<el;
+         
     }
 }

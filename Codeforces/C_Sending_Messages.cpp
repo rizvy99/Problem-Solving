@@ -17,10 +17,10 @@ int main() {
      for(int i=0;i<n;i++){
         cin>>ar[i];
      }
-     ll pre=0,mn;
+     ll pre=0,mn=0;
      for(int i=0;i<n;i++){
      mn=min(b,abs(ar[i]-pre)*a);
-     f=mn;
+     f-=mn;
      pre=ar[i];
     }
     if(f>0){
