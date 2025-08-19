@@ -24,10 +24,6 @@ int main() {
             }
         }
     }
-     cnt *= 4;
-    cnt -= (4 * n + 1);  
-
-    
     cout << cnt << el;
     return 0;
 }
