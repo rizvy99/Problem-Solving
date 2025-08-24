@@ -14,7 +14,7 @@ int main() {
         int n,x;
         cin>>n>>x;
         if (x == 0) {
-            for (int i = 1; i <n; i++)
+            for (int i = 1; i <=n-1; i++)
             {
                 cout << i << " ";
             }

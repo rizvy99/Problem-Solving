@@ -21,7 +21,7 @@ int main() {
         }
         int sum =0;
         for(int k=0;k<n;k++){
-            int i=0,j=k,min_val=INT_MAX;
+            int i=0,j=k,min_val=0;
             while(i<n && j<n){
                 if(v[i][j]<0){
                     min_val=min(min_val,v[i][j]);

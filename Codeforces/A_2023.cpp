@@ -11,17 +11,17 @@ int main() {
     int t;
     cin>>t;
     while(t--){
-        int n,k,mul=1;
+        ll n,k,mul=1;
         cin>>n>>k;
         vector<int>v(n);
-        for(int i=0;i<n;i++){
+        for(ll i=0;i<n;i++){
             cin>>v[i];
             mul*=v[i];
         }
         if(2023%mul==0){
             cout<<"YES"<<el;
             cout<<2023/mul<<" ";
-            for(int i=1;i<k;i++){
+            for(ll i=1;i<k;i++){
                 cout<<1<<" ";
             }cout<<el;
         }else{cout<<"NO"<<el;}

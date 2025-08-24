@@ -8,12 +8,10 @@ using namespace std;
 
 void solve() {
     int t;
-    cin >> t; // Number of test cases
-
+    cin >> t;  
     while (t--) {
         int n, k;
         cin >> n >> k;
-
         vector<int> ans(n);
         int j=1;
         for(int i = k-1;i<n;i+=k,j++){

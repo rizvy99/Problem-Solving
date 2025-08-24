@@ -20,20 +20,16 @@ int main() {
         }
         for(int i=0;i<n-1;i++){
             if(v[i]!=i+1){
-            if(v[i+1]==i+1 && v[i]==i+2){
-                swap(v[i],v[i+1]);
-                //cnt++;
-            }else{
-                flag = false;
-                break;
-            }
+                if(v[i+1]==i+1 && v[i]==i+2){
+                    swap(v[i],v[i+1]);
+                    //cnt++;
+                }else{
+                    flag = false;
+                    break;
+                }
             } 
         }
         cout<<(flag? "YES" : "NO")<<el;
-        
-         
-         
-     
     }
     return 0;
 }

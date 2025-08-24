@@ -19,18 +19,18 @@ int main() {
             sum += v[i];
         }
         int k = sum / n;
-        bool possible = true;
+        bool flag = true;
 
         for (int i = 0; i < n - 1; i++) {
             if (v[i] < k) {
-                possible = false;
+                flag = false;
                 break;
             }
             v[i + 1] += (v[i] - k);
             v[i] = k;
         }
         
-        if (possible) {
+        if (flag) {
             cout << "YES" <<el;
         } else {
             cout << "NO" <<el;

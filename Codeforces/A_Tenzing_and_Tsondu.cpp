@@ -12,7 +12,7 @@ int main() {
     cin>>t;
     while(t--){
         int n, m, a[50], b[50];
-        long long sumA = 0, sumB = 0;
+        ll sumA = 0, sumB = 0;
         cin >> n >> m;
         for (int i = 0; i < n; i++)
             cin >> a[i], sumA += a[i];
